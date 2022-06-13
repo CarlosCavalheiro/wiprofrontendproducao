@@ -1,0 +1,32 @@
+<div class="card m-2">
+    <div class="card-body">
+        <h3>Filmes Populares - TOP 20</h3>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Fotos</th>
+                <th scope="col">Titulo Original</th>
+                <th scope="col">Resumo do Filme</th>
+                <th scope="col">Votos</th>
+                <th scope="col">Média</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let filme of filmes">
+                <td><img src="https://image.tmdb.org/t/p/w220_and_h330_face/{{filme.backdrop_path}}" width="100"></td>
+                <td>{{filme.original_title}}</td>
+                <td>{{filme.overview}}</td>
+                <td>{{filme.vote_count}}</td>
+                <td>{{filme.vote_average}}</td>
+              </tr>                      
+            </tbody>
+          </table>
+        
+    </div>
+    <div class="card-footer">
+      <p class="text-right"><i>API de Filme - https://api.themoviedb.org/3/movie/</i></p>
+    </div>
+</div>
+
+
+
